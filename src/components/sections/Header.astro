@@ -1,23 +1,42 @@
 ---
 import Section from "../Section.astro";
 import Reddit from "../../icons/RedditIcon.astro";
+import info from "../../portfolio.json";
+import Location from "../../icons/Location.astro";
 ---
 
 <Section>
     <div class="flex justify-between w-full">
-        <div>
-            <h3 class="text-gray-500">Brian Zaragoza Cerdá</h3>
-            <p>lorem ipsulum</p>
-            <a
-                title="Brian's Github"
-                class="w-24 h-24 text-red-400 bg-red-500"
-                href="https://github.com/Narxib"><Reddit /></a
-            >
+        <div class="w-1/2">
+            <h3 class="text-black pb-4 text-wrap text-3xl font-bold">
+                {info.name}
+            </h3>
+            <p class="text-gray-700 font-bold">
+                Desarrollador full stack autodidacta
+            </p>
+            <div class="flex items-center text-sm">
+                <Location />
+                <p class="pl-2 text-textColor font-cour">
+                    {info.location}
+                </p>
+            </div>
+
+            <div class="flex gap-1 mt-4">
+                <button
+                    class="border-[1px] hover:bg-gray-200 border-gray-500 rounded-xl p-2"
+                >
+                    <a
+                        title="Brian's Github"
+                        class="w-24 h-24 rounded-full text-red-400"
+                        href={info.socials.github}><Reddit /></a
+                    >
+                </button>
+            </div>
         </div>
 
         <img
-            class="w-16 h-16"
-            src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+            class="w-24 h-24 rounded-full"
+            src="https://avatars.githubusercontent.com/u/108269492?v=4"
             alt="pf"
         />
     </div>
