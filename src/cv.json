@@ -1,0 +1,15 @@
+{
+    "name":"Brian Zaragoza Cerdá",
+    "location":{
+        "city":"Santa Pola, Alicante",
+        "country":"España"},
+
+    "socials":[{
+        "name":"Email",
+        "link":"mailto:brianzaragoza25@gmail.com"
+    },{
+        "name":"Github",
+        "link":"https://github.com/Narxib"
+    }]
+
+}

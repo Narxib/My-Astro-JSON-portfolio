@@ -1,15 +1,19 @@
 ---
 import Section from "../Section.astro";
-import Reddit from "../../icons/RedditIcon.astro";
-import info from "../../portfolio.json";
+import SocialsIcon from "./SocialsIcon.astro";
+import info from "@/cv";
 import Location from "../../icons/Location.astro";
+import Reddit from "@/icons/RedditIcon.astro";
+import Email from "@/icons/Email.astro";
+
+const { name, location, socials } = info;
 ---
 
 <Section>
     <div class="flex justify-between w-full">
         <div class="w-1/2">
             <h3 class="text-black pb-4 text-wrap text-3xl font-bold">
-                {info.name}
+                {name}
             </h3>
             <p class="text-gray-700 font-bold">
                 Desarrollador full stack autodidacta
@@ -17,19 +21,22 @@ import Location from "../../icons/Location.astro";
             <div class="flex items-center text-sm">
                 <Location />
                 <p class="pl-2 text-textColor font-cour">
-                    {info.location}
+                    {location.city}
                 </p>
             </div>
-
-            <div class="flex gap-1 mt-4">
+            <div class="mt-4 flex gap-2">
+                <SocialsIcon Icon={Reddit} link={info.socials[1].link} />
                 <button
-                    class="border-[1px] hover:bg-gray-200 border-gray-500 rounded-xl p-2"
+                    data-copy-to-clipboard-target="email"
+                    class="flex flex-col hover:bg-gray-200 rounded-lg transition-all ease-in duration-75 align-middle items-center text-center justify-center"
                 >
                     <a
-                        title="Brian's Github"
-                        class="w-24 h-24 rounded-full text-red-400"
-                        href={info.socials.github}><Reddit /></a
+                        class="border-[2px] border-gray-400 p-1 rounded-lg"
+                        title={socials[0].link}
+                        href={socials[0].link}
                     >
+                        <Email />
+                    </a>
                 </button>
             </div>
         </div>
