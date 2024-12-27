@@ -2,7 +2,7 @@
 const { title } = Astro.props;
 ---
 
-<div class="w-1/2 h-auto mt-8">
-    <h2>{title}</h2>
+<div class="w-11/12 max-w-[750px] h-auto p-5">
+    {title && <h2 class="text-2xl font-bold font-play mb-2">{title}</h2>}
     <slot />
 </div>

@@ -1,15 +1,20 @@
 {
-    "name":"Brian Zaragoza Cerdá",
-    "location":{
-        "city":"Santa Pola, Alicante",
-        "country":"España"},
-
-    "socials":[{
-        "name":"Email",
-        "link":"mailto:brianzaragoza25@gmail.com"
-    },{
-        "name":"Github",
-        "link":"https://github.com/Narxib"
-    }]
-
+    "basics": {
+        "name": "Brian Zaragoza Cerdá",
+        "location": {
+            "city": "Santa Pola, Alicante",
+            "country": "España"
+        },
+        "socials": [
+            {
+                "name": "Email",
+                "link": "mailto:brianzaragoza25@gmail.com"
+            },
+            {
+                "name": "Github",
+                "link": "https://github.com/Narxib"
+            }
+        ],
+        "aboutme": "Conocimientos en bases de datos como MongoDB y MySQL. Creacion de paginas web con NextJS, React, Astro y Express. Localizado en Santa Pola, Alicante"
+    }
 }

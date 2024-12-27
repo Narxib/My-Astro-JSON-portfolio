@@ -8,9 +8,6 @@ export default {
         textColor: "#6b7280",
         titleColor: "#1f2937"
       },
-      fontFamily: {
-        cour: ["Courier Prime", "serif"]
-      }
     },
   },
   plugins: [],
