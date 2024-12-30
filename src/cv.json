@@ -16,5 +16,21 @@
             }
         ],
         "aboutme": "Conocimientos en bases de datos como MongoDB y MySQL. Creacion de paginas web con NextJS, React, Astro y Express. Localizado en Santa Pola, Alicante"
-    }
+    },
+    "workExp": "I dont have work experience but i made personal projects like this resume and many others on my Github",
+    "knowledge": [
+        {
+            "langs": "Javascript",
+            "frameworkds": [
+                "React",
+                "React Native",
+                "Astro",
+                "NextJS"
+            ],
+            "databases": [
+                "MongoDB",
+                "MySQL"
+            ]
+        }
+    ]
 }

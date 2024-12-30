@@ -4,7 +4,7 @@ import SectionJSX from "../Section.jsx";
 import SocialsIcon from "./SocialsIcon.jsx";
 import cv from "@/cv";
 import Location from "../../icons/Location.jsx";
-import Reddit from "@/icons/Github.jsx";
+import Github from "@/icons/Github.jsx";
 import Email from "@/icons/Email.jsx";
 
 
@@ -28,7 +28,7 @@ export default function Header() {
                         </p>
                     </div>
                     <div className="mt-4 flex">
-                        <SocialsIcon Icon={Reddit} link={socials[1].link} client:load />
+                        <SocialsIcon Icon={Github} link={socials[1].link} client:load />
                         <button className="flex flex-col group rounded-lg transition-all ease-in duration-75 align-middle items-center text-center justify-center">
                             <a className="border-[2px] group-hover:bg-gray-100 border-gray-400 p-1 rounded-lg"
                                 title={socials[0].name}

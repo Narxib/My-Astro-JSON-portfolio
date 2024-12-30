@@ -1,0 +1,18 @@
+---
+import Section from "../Section.astro";
+import Astro from "@/icons/Github.jsx";
+import Pill from "./Pill.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Section title="Knowledge">
+    <Pill
+        class="flex gap-1 print items-center justify-center w-auto max-w-24 text-purple-400 border-gray-300 border-[2px] font-mono font-bold rounded-lg text-center bg-gray-950"
+        >Astro <Icon name="astro" class="w-4 h-4" />
+    </Pill>
+</Section>
+
+<style>
+    .print {
+    }
+</style>

@@ -1,0 +1,11 @@
+---
+import Section from "../Section.astro";
+import cv from "@/cv.json";
+const { workExp } = cv;
+---
+
+<Section title="Work experience">
+    <h2 class="text-gray-500 tracking-wide font-mono text-sm">
+        {typeof cv.workExp === "object" ? "empty" : cv.workExp}
+    </h2>
+</Section>
