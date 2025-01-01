@@ -10,6 +10,15 @@ import Email from "@/icons/Email.jsx";
 
 
 export default function Header() {
+
+    function copyContent() {
+        let text = document.getElementById("email")
+        const email = text.attributes.href.value.slice(7, 32)
+        navigator.clipboard.writeText(email)
+        console.log(email)
+    }
+
+
     const { name, location, socials } = cv.basics;
     return (
         <SectionJSX>
@@ -27,18 +36,18 @@ export default function Header() {
                             {location.city}
                         </p>
                     </div>
-                    <div className="mt-4 flex">
-                        <SocialsIcon Icon={Github} link={socials[1].link} client:load />
-                        <button className="flex flex-col group rounded-lg transition-all ease-in duration-75 align-middle items-center text-center justify-center">
-                            <a className="border-[2px] group-hover:bg-gray-100 border-gray-400 p-1 rounded-lg"
+                    <div className="mt-4 flex gap-2">
+                        <SocialsIcon Icon={Github} link={socials[1].link} />
+                        <div className="flex flex-col relative group rounded-lg transition-all ease-in duration-75 align-middle items-center text-center justify-center">
+                            <a id="email" className="border-[2px] group-hover:bg-gray-100 border-gray-400 p-1 rounded-lg"
                                 title={socials[0].name}
                                 href={socials[0].link}>
                                 <Email />
                             </a>
-                            <div className="invisible mt-2 border-[1px] border-gray-500 rounded-lg bg-gray-100 group-hover:visible">
-                                <a className="p-1 text-gray-700" href="/" >Copy</a>
+                            <div className="invisible  absolute top-9 border-[1px] border-gray-500 rounded-lg bg-gray-100 group-hover:visible">
+                                <button onClick={copyContent} className="p-1 text-gray-700" href="/" >Copy</button>
                             </div>
-                        </button>
+                        </div>
                     </div>
                 </div>
 

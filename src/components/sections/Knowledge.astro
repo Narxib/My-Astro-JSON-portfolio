@@ -1,18 +1,35 @@
 ---
 import Section from "../Section.astro";
-import Astro from "@/icons/Github.jsx";
 import Pill from "./Pill.astro";
-import { Icon } from "astro-icon/components";
+import AstroPill from "../Pills/AstroPill.astro";
+import NextJSPill from "../Pills/NextJSPill.astro";
+import cv from "@/cv.json";
 ---
 
 <Section title="Knowledge">
-    <Pill
-        class="flex gap-1 print items-center justify-center w-auto max-w-24 text-purple-400 border-gray-300 border-[2px] font-mono font-bold rounded-lg text-center bg-gray-950"
-        >Astro <Icon name="astro" class="w-4 h-4" />
-    </Pill>
+    <div class="flex gap-2">
+        <div
+            class="flex-col border-2 justify-center text-center p-2 center w-1/3 border-gray-200"
+        >
+            <h2 class="font-bold mb-4">Frameworks</h2>
+            <div class="flex flex-wrap justify-center gap-2">
+                <NextJSPill data={cv.knowledge.frameworks[0]} />
+                <AstroPill data={cv.knowledge.frameworks[1]} />
+                <NextJSPill data={cv.knowledge.frameworks[0]} />
+                <AstroPill data={cv.knowledge.frameworks[1]} />
+            </div>
+        </div>
+        <div class="flex-col border-2 text-center w-1/3 border-gray-200">
+            <h2>Databases</h2>
+            <div class="flex gap-2">
+                <Pill class="bg">{cv.knowledge.frameworks[0]}</Pill>
+            </div>
+        </div>
+        <div class="flex-col border-2 text-center w-1/3 border-gray-200">
+            <h2>Languages</h2>
+            <div class="flex gap-2">
+                <Pill class="bg">{cv.knowledge.langs}</Pill>
+            </div>
+        </div>
+    </div>
 </Section>
-
-<style>
-    .print {
-    }
-</style>

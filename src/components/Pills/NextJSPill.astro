@@ -1,0 +1,12 @@
+---
+import Pill from "../sections/Pill.astro";
+import { Icon } from "astro-icon/components";
+
+const { data } = Astro.props;
+---
+
+<Pill
+    class="flex w-1/2 bg-black p-2 gap-2 rounded-lg border-2 border-gray-400 items-center justify-center text-center text-gray-50 font-mono font-bold"
+    >{data}
+    <Icon class="text-black border-white rounded-full" name="nextjs" />
+</Pill>
