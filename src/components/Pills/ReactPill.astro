@@ -1,0 +1,11 @@
+---
+import Pill from "../sections/Pill.astro";
+import { Icon } from "astro-icon/components";
+
+const { data } = Astro.props;
+---
+
+<Pill
+    class="flex w-auto p-2 bg-gray-900 gap-2 border-2 rounded-lg border-sky-300 items-center justify-center text-center text-white font-mono font-bold"
+    >{data} <Icon class="text-white" name="react" />
+</Pill>
