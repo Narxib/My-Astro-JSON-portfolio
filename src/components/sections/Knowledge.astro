@@ -5,38 +5,33 @@ import AstroPill from "../Pills/AstroPill.astro";
 import NextJSPill from "../Pills/NextJSPill.astro";
 import ReactPill from "../Pills/ReactPill.astro";
 import MongoPill from "../Pills/MongoPill.astro";
-import JSpill from "../Pills/NextJSPill.astro";
+import JSpill from "../Pills/JSpill.astro";
+import MySQLPill from "../Pills/MySQLPill.astro";
+import TailwindPill from "../Pills/TailwindPill.astro";
+import CSSPill from "../Pills/CSSPill.astro";
+import BootstrapPill from "../Pills/BootstrapPill.astro";
+import KnowledgeSection from "../sections/KnowledgeSection.astro";
 import cv from "@/cv.json";
 import React from "react";
 ---
 
 <Section title="Knowledge">
     <div class="flex gap-2">
-        <div
-            class="flex-col border-2 rounded-xl justify-center text-center p-2 center w-1/3 border-gray-200"
-        >
-            <h2 class="font-bold mb-4">Frameworks</h2>
-            <div class="flex flex-wrap justify-center gap-2">
-                <NextJSPill data={cv.knowledge.frameworks[0]} />
-                <AstroPill data={cv.knowledge.frameworks[1]} />
-                <ReactPill data={cv.knowledge.frameworks[2]} />
-            </div>
-        </div>
-        <div
-            class="flex-col border-2 rounded-xl p-2 justify-center text-center center w-1/3 border-gray-200"
-        >
-            <h2>Databases</h2>
-            <div class="flex gap-2">
-                <MongoPill data={cv.knowledge.databases[0]} />
-            </div>
-        </div>
-        <div
-            class="flex-col border-2 justify-center rounded-xl text-center p-2 center w-1/3 border-gray-200"
-        >
-            <h2>Languages</h2>
-            <div class="flex gap-2">
-                <JSpill data={cv.knowledge.langs[0]} />
-            </div>
-        </div>
+        <KnowledgeSection title="Frameworks">
+            <NextJSPill data={cv.knowledge.frameworks[0]} />
+            <AstroPill data={cv.knowledge.frameworks[1]} />
+            <ReactPill data={cv.knowledge.frameworks[2]} />
+        </KnowledgeSection>
+
+        <KnowledgeSection title="Languages and Styling">
+            <JSpill data={cv.knowledge.langsandstyling[0]} />
+            <CSSPill data={cv.knowledge.langsandstyling[1]} />
+            <TailwindPill data={cv.knowledge.langsandstyling[2]} />
+            <BootstrapPill data={cv.knowledge.langsandstyling[3]} />
+        </KnowledgeSection>
+        <KnowledgeSection title="Databases">
+            <MongoPill data={cv.knowledge.databases[0]} />
+            <MySQLPill data={cv.knowledge.databases[1]} />
+        </KnowledgeSection>
     </div>
 </Section>

@@ -29,6 +29,11 @@
             "MongoDB",
             "MySQL"
         ],
-        "langs": "Javascript"
+        "langsandstyling": [
+            "Javascript",
+            "CSS",
+            "Tailwind",
+            "Bootstrap"
+        ]
     }
 }
