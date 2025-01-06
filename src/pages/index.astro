@@ -4,9 +4,11 @@ import Header from "../components/sections/Header.jsx";
 import Aboutme from "@/components/Aboutme.astro";
 import Work from "@/components/sections/Work.astro";
 import Knowledge from "@/components/sections/Knowledge.astro";
+import ThemeButton from "@/components/sections/ThemeButton.jsx";
 ---
 
 <Layout>
+    <ThemeButton client:load />
     <Header client:load />
     <Aboutme />
     <Work />
