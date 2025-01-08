@@ -46,3 +46,7 @@
 		background-color: theme(colors.gray.900);
 		
 	}
+
+	.dark #sunsvg{
+		stroke: white;
+	}
