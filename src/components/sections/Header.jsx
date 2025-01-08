@@ -6,7 +6,7 @@ import cv from "@/cv";
 import Location from "../../icons/Location.jsx";
 import Github from "@/icons/Github.jsx";
 import Email from "@/icons/Email.jsx";
-
+import ThemeButton from "./ThemeButton.jsx";
 
 
 export default function Header() {
@@ -49,6 +49,7 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <img
