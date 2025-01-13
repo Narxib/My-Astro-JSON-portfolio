@@ -26,13 +26,20 @@
 
 
 	.dark h2,h1,h3{
-		color:theme(colors.gray.400)
+		color:theme(colors.gray.400);
+		font-family: theme(fontFamily.mono)
 	}
-	.dark img{
+	.dark  .indicator{
+		color:theme(colors.green.500);
+		font-family: theme(fontFamily.mono);
+		
+	}
+	.dark .profile{
 		border-radius: 100%;
 	}
 	.dark h3{
-		color:theme(colors.gray.400)
+		color:theme(colors.gray.400);
+		font-family: monospace;
 	}
 	
 	.dark a{
@@ -50,3 +57,5 @@
 	.dark #sunsvg{
 		stroke: white;
 	}
+
+

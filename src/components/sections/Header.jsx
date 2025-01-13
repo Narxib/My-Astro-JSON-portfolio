@@ -53,7 +53,7 @@ export default function Header() {
                 </div>
 
                 <img
-                    className="w-32 h-32"
+                    className="profile w-32 h-32"
                     src="https://avatars.githubusercontent.com/u/108269492?v=4"
                     alt="pf"
                 />

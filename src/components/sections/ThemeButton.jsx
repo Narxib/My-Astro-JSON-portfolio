@@ -4,7 +4,7 @@ export default function ThemeButton() {
 
     function changeTheme() {
         const currentTheme = localStorage.getItem("theme")
-        if (currentTheme === "light") {
+        if (currentTheme == "light") {
             localStorage.setItem("theme", "dark")
             document.body.classList.remove("light")
             document.body.classList.add("dark")
