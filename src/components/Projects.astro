@@ -11,19 +11,30 @@ import cv from "@/cv.json";
                     <div class="flex-col border-2 rounded-lg p-2 w-1/2 h-auto">
                         <div class="flex justify-between">
                             <h2 class="font-bold font-mono">{item.title}</h2>
-                            <h2
-                                class={`${item.active ? "text-green-500" : "text-red-500"} p-0 my-4 boxsize shadow-[0px_0px_45px_5px_rgba(0,255,0,1)] indicator animate-pulse text-2xl rounded-full $`}
+                            <svg
+                                height="50"
+                                width="50"
+                                viewBox="0"
+                                class="blinking "
                             >
-                                •
-                            </h2>
+                                <circle
+                                    class="indicator"
+                                    cx="20"
+                                    cy="20"
+                                    r="5"
+                                    dx="4"
+                                    dy="8"
+                                    stdDeviation="4"
+                                    fill={item.active ? "green" : "red"}
+                                />
+                            </svg>
                         </div>
-
                         <p class="mb-4 h-12 font-mono text-gray-500">
                             {item.description}
                         </p>
 
                         <img
-                            class="w-full border-2 border-gray-300"
+                            class="w-full md:mt-0 mt-16 border-2 border-gray-300"
                             src={item.img}
                             alt="project img"
                         />
@@ -33,3 +44,23 @@ import cv from "@/cv.json";
         }
     </div>
 </Section>
+
+<style>
+    @keyframes "blink" {
+        from,
+        to {
+            opacity: 100%;
+        }
+
+        50% {
+            opacity: 100%;
+        }
+    }
+
+    .dark .indicator {
+        -webkit-box-shadow: 0px 0px 130px 40px rgba(0, 240, 28, 0.5);
+        -moz-box-shadow: 0px 0px 130px 1px rgba(0, 240, 28, 0.5);
+        box-shadow: 0px 0px 130px 1px rgba(0, 240, 28, 0.5);
+        animation: blink infinite 2s linear;
+    }
+</style>
