@@ -13,23 +13,23 @@ import KnowledgeSection from "../sections/KnowledgeSection.astro";
 import cv from "@/cv.json";
 ---
 
-<Section title="Knowledge">
-    <div class="flex gap-2">
-        <KnowledgeSection title="Frameworks">
-            <NextJSPill data={cv.knowledge.frameworks[0]} />
-            <AstroPill data={cv.knowledge.frameworks[1]} />
-            <ReactPill data={cv.knowledge.frameworks[2]} />
-        </KnowledgeSection>
+<Section title="Conocimientos">
+  <div class="flex gap-2">
+    <KnowledgeSection title="Frameworks">
+      <NextJSPill data={cv.knowledge.frameworks[0]} />
+      <AstroPill data={cv.knowledge.frameworks[1]} />
+      <ReactPill data={cv.knowledge.frameworks[2]} />
+    </KnowledgeSection>
 
-        <KnowledgeSection title="Languages and Styling">
-            <JSpill data={cv.knowledge.langsandstyling[0]} />
-            <CSSPill data={cv.knowledge.langsandstyling[1]} />
-            <TailwindPill data={cv.knowledge.langsandstyling[2]} />
-            <BootstrapPill data={cv.knowledge.langsandstyling[3]} />
-        </KnowledgeSection>
-        <KnowledgeSection title="Databases">
-            <MongoPill data={cv.knowledge.databases[0]} />
-            <MySQLPill data={cv.knowledge.databases[1]} />
-        </KnowledgeSection>
-    </div>
+    <KnowledgeSection title="Languages and Styling">
+      <JSpill data={cv.knowledge.langsandstyling[0]} />
+      <CSSPill data={cv.knowledge.langsandstyling[1]} />
+      <TailwindPill data={cv.knowledge.langsandstyling[2]} />
+      <BootstrapPill data={cv.knowledge.langsandstyling[3]} />
+    </KnowledgeSection>
+    <KnowledgeSection title="Databases">
+      <MongoPill data={cv.knowledge.databases[0]} />
+      <MySQLPill data={cv.knowledge.databases[1]} />
+    </KnowledgeSection>
+  </div>
 </Section>
