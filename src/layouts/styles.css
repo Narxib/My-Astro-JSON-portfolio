@@ -16,11 +16,13 @@
   }
 }
 
-html,
+html
 body {
   margin: 0;
   margin-top: 30px;
   width: 100%;
+  font-weight: bold;
+  font-family: sans-serif;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -29,9 +31,16 @@ body {
   transition: 0.1s all linear;
 }
 
-.dark #title {
+.dark  #title {
   @apply text-gray-400;
+  @apply font-sans;
   @apply font-bold;
+}
+.dark #name{
+   @apply font-sans;
+  @apply text-2xl;
+    @apply tracking-normal;
+   @apply text-gray-400;
 }
 
 .dark,
@@ -53,17 +62,23 @@ h3 {
 
 .dark,
 a {
-  color: white;
+  @apply text-white;
   @apply bg-gray-400;
 }
 
-.dark,
+.dark
 p {
   @apply text-gray-400;
+  @apply font-bold;
+  @apply text-sm;
 }
 
 .dark {
   @apply bg-gray-900;
+}
+
+.dark #langButton{
+  @apply text-blue-400
 }
 
 #sunsvg {

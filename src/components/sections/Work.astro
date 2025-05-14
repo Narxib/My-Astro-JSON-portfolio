@@ -1,11 +1,12 @@
 ---
 import Section from "../Section.astro";
-import cv from "@/cv.json";
-const { workExp } = cv;
+const data= Astro.props
+console.log("############",data.cv)
+const { workExp } = data;
 ---
 
 <Section title="Experiencia laboral">
-  <h2 class="text-gray-500 tracking-wide font-mono text-sm">
-    {typeof cv.workExp === "object" ? "empty" : workExp}
+  <h2 class="text-gray-500  font-mono text-sm">
+    {typeof data.cv === "object" ? "empty" : data.cv}
   </h2>
 </Section>

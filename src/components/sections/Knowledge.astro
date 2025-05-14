@@ -10,26 +10,28 @@ import TailwindPill from "../Pills/TailwindPill.astro";
 import CSSPill from "../Pills/CSSPill.astro";
 import BootstrapPill from "../Pills/BootstrapPill.astro";
 import KnowledgeSection from "../sections/KnowledgeSection.astro";
-import cv from "@/cv.json";
+const knowledge = Astro.props
+const {frameworks,langsandstyling,databases} = knowledge.cv
+
 ---
 
 <Section title="Conocimientos">
   <div class="flex gap-2">
     <KnowledgeSection title="Frameworks">
-      <NextJSPill data={cv.knowledge.frameworks[0]} />
-      <AstroPill data={cv.knowledge.frameworks[1]} />
-      <ReactPill data={cv.knowledge.frameworks[2]} />
+      <NextJSPill data={frameworks[0]} />
+      <AstroPill data={frameworks[1]} />
+      <ReactPill data={frameworks[2]} />
     </KnowledgeSection>
 
     <KnowledgeSection title="Languages and Styling">
-      <JSpill data={cv.knowledge.langsandstyling[0]} />
-      <CSSPill data={cv.knowledge.langsandstyling[1]} />
-      <TailwindPill data={cv.knowledge.langsandstyling[2]} />
-      <BootstrapPill data={cv.knowledge.langsandstyling[3]} />
+      <JSpill data={langsandstyling[0]} />
+      <CSSPill data={langsandstyling[1]} />
+      <TailwindPill data={langsandstyling[2]} />
+      <BootstrapPill data={langsandstyling[3]} />
     </KnowledgeSection>
     <KnowledgeSection title="Databases">
-      <MongoPill data={cv.knowledge.databases[0]} />
-      <MySQLPill data={cv.knowledge.databases[1]} />
+      <MongoPill data={databases[0]} />
+      <MySQLPill data={databases[1]} />
     </KnowledgeSection>
   </div>
 </Section>

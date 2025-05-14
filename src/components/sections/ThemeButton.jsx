@@ -15,7 +15,7 @@ export default function ThemeButton() {
   return (
     <button
       onClick={() => changeTheme()}
-      className="no-print w-12 h-12  cursor-pointer self-end mx-[-20px] "
+      className="no-print w-12 h-12  cursor-pointer self-end mx-2 "
     >
       <svg
         id="sunsvg"

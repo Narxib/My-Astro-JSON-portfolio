@@ -7,7 +7,8 @@ import Github from "@/icons/Github.jsx";
 import Email from "@/icons/Email.jsx";
 import ThemeButton from "./ThemeButton.jsx";
 
-export default function Header() {
+export default function Header({cv}) {
+  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>><",cv)
   function copyContent() {
     let text = document.getElementById("email");
     const email = text.attributes.href.value.slice(7, 32);
@@ -15,13 +16,13 @@ export default function Header() {
     console.log(email);
   }
 
-  const { name, location, socials } = cv.basics;
+  const { name, location, socials } = cv;
   return (
     <SectionJSX>
       <div className="flex justify-between w-full">
         <div className="w-1/2">
           <h1
-            id="title"
+            id="name"
             className="text-gray-800 pb-4 text-wrap text-3xl font-bold"
           >
             {name}
