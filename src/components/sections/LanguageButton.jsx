@@ -6,7 +6,7 @@ export default function LanguageButton() {
   return (
     <div
       id="langButton"
-      className="no-print flex-col w-auto relative h-16 rounded-lg  justify-center items-center text-center cursor-pointer self-end mx-20 my-[-40px]"
+      className="no-print relative flex-col  w-auto  h-16 rounded-lg  justify-center items-center text-center cursor-pointer self-end mx-0 md:mx-20 my-[-40px]"
     >
       <button
         className="bg-gray-300 text-gray-800 px-2 py-1 rounded-lg"
@@ -16,20 +16,20 @@ export default function LanguageButton() {
       </button>
       <div
         className={`${
-          visible ? "flex flex-col " : "hidden"
-        } absolute top-9 p-2 left-[-9px] gap-2 border-dotted border-gray-400 border-[1px] justify-center items-center rounded-lg  w-14 h-auto`}
+          visible ? "flex flex-col ] " : "hidden"
+        } absolute top-9 p-2 left-[-20px] md:left-[-20px] gap-2 border-gray-400 border-[1px] justify-center items-center rounded-lg  w-20 h-auto`}
       >
         <a
           className="w-full h-auto bg-white hover:bg-gray-300  rounded-md text-gray-800 "
           href="/en"
         >
-          EN
+          EN 🇬🇧
         </a>
         <a
-          className="w-full h-auto rounded-md bg-white hover:bg-gray-300"
+          className="w-full h-auto bg-white hover:bg-gray-300  rounded-md text-gray-800 "
           href="/"
         >
-          ES
+          ES 🇪🇸
         </a>
       </div>
     </div>

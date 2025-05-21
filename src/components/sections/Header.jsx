@@ -7,8 +7,8 @@ import Github from "@/icons/Github.jsx";
 import Email from "@/icons/Email.jsx";
 import ThemeButton from "./ThemeButton.jsx";
 
-export default function Header({cv}) {
-  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>><",cv)
+export default function Header({ cv }) {
+  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>><", cv);
   function copyContent() {
     let text = document.getElementById("email");
     const email = text.attributes.href.value.slice(7, 32);
@@ -27,12 +27,15 @@ export default function Header({cv}) {
           >
             {name}
           </h1>
-          <p className="text-gray-700 font-bold">
+          <p className="text-gray-800 text-sm font-bold">
             Desarrollador full stack autodidacta
           </p>
-          <div className="flex items-center">
+          <div className="flex mt-1">
             <Location />
-            <p className="pl-1 text-textColor text-xs font-mono">
+            <p
+              id="locationText"
+              className="pl-1 text-gray-800 text-xs font-mono"
+            >
               {location.city}
             </p>
           </div>
