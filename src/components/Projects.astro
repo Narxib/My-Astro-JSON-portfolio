@@ -1,7 +1,8 @@
 ---
 import Section from "./Section.astro";
-const {data} = Astro.props
-
+import Github from "@/icons/Github";
+import SocialsIcon from "./sections/SocialsIcon.jsx";
+const { data } = Astro.props;
 ---
 
 <Section title="Proyectos">
@@ -9,10 +10,15 @@ const {data} = Astro.props
     {
       data.map((item) => {
         return (
-          <div class="flex-col border-2 rounded-lg p-2 w-1/2 h-auto">
+          <a
+            href={item.link}
+            class="flex-col border-2 p-2 rounded-lg w-1/2 h-auto"
+          >
             <div class="flex justify-between">
-              <h2 class="font-bold text-sm font-mono">{item.title}</h2>
-              <svg height="50" width="50" viewBox="0" class="blinking ">
+              <h2 class="font-bold text-sm flex gap-4 font-mono dark:text-gray-300">
+                {item.title}
+              </h2>
+              <svg height="50" width="50" viewBox="0" class="animate-pulse">
                 <circle
                   class="indicator"
                   cx="20"
@@ -25,14 +31,16 @@ const {data} = Astro.props
                 />
               </svg>
             </div>
-            <p class="mb-4 h-12 text-sm font-mono text-gray-500">{item.description}</p>
+            <p class="mb-4 h-12 text-sm font-mono text-gray-500">
+              {item.description}
+            </p>
 
             <img
               class="no-print w-full md:mt-0 mt-16 border-2 border-gray-300"
               src={item.img}
               alt="project img"
             />
-          </div>
+          </a>
         );
       })
     }

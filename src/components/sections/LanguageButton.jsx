@@ -9,7 +9,7 @@ export default function LanguageButton() {
       className="no-print relative flex-col  w-auto  h-16 rounded-lg  justify-center items-center text-center cursor-pointer self-end mx-0 md:mx-20 my-[-40px]"
     >
       <button
-        className="bg-gray-300 text-gray-800 px-2 py-1 rounded-lg"
+        className="bg-gray-300 dark:bg-gray-800  dark:text-gray-300 text-gray-800 px-2 py-1 rounded-lg"
         onClick={() => setVisible(!visible)}
       >
         {lan}

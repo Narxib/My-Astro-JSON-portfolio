@@ -7,16 +7,15 @@ import Knowledge from "@/components/sections/Knowledge.astro";
 import Projects from "@/components/Projects.astro";
 import ThemeButton from "@/components/sections/ThemeButton.jsx";
 import LanguageButton from "@/components/sections/LanguageButton";
-import cv from "@/cv.json"
-
+import cv from "@/cv.json";
 ---
 
-<Layout>
+<Layout class="dark:bg-black">
   <ThemeButton client:only />
   <LanguageButton client:load />
   <Header cv={cv.basics} client:load />
-  <Aboutme cv={cv.basics.aboutme}/>
+  <Aboutme cv={cv.basics.aboutme} />
   <Work cv={cv.workExp} />
-  <Knowledge cv={cv.knowledge}/>
+  <Knowledge cv={cv.knowledge} />
   <Projects data={cv.projects} />
 </Layout>

@@ -30,64 +30,6 @@ html body {
   transition: 0.1s all linear;
 }
 
-.dark #title {
-  @apply text-gray-300;
-  @apply font-sans;
-  @apply font-bold;
-}
-.dark #name {
-  @apply font-sans;
-  @apply text-3xl;
-  @apply text-gray-400;
-}
-
-.dark,
-h2 {
-  @apply text-gray-400;
-  @apply font-bold;
-}
-
-.dark,
-.profile {
-  border-radius: 100%;
-}
-
-.dark,
-h3 {
-  @apply text-gray-400;
-  @apply font-mono;
-}
-
-.dark,
-a {
-  @apply text-white;
-  @apply bg-gray-400;
-}
-
-.dark p {
-  @apply text-gray-400;
-  @apply font-mono;
-  @apply text-sm;
-}
-
-.dark #locationText {
-  @apply text-gray-400;
-  @apply text-xs;
-  @apply font-mono;
-}
-
 .dark {
-  background-color: #121212;
-}
-
-.dark #langButton {
-  @apply text-blue-400;
-}
-
-#sunsvg {
-  @apply stroke-black;
-}
-
-.dark #sunsvg {
-  @apply stroke-slate-400;
+  background-color: black;
 }

@@ -23,37 +23,37 @@ export default function Header({ cv }) {
         <div className="w-1/2">
           <h1
             id="name"
-            className="text-gray-800 pb-4 text-wrap text-3xl font-bold"
+            className="text-gray-800 dark:text-gray-200 pb-4 text-wrap text-3xl font-bold"
           >
             {name}
           </h1>
-          <p className="text-gray-800 text-sm font-bold">
+          <p className="text-gray-800 dark:text-gray-200  text-sm font-bold">
             Desarrollador full stack autodidacta
           </p>
-          <div className="flex mt-1">
+          <div className="flex mt-1 dark:text-gray-200">
             <Location />
             <p
               id="locationText"
-              className="pl-1 text-gray-800 text-xs font-mono"
+              className="pl-1 text-gray-800 dark:text-gray-200 text-xs font-mono"
             >
               {location.city}
             </p>
           </div>
           <div className="mt-4 flex gap-2">
             <SocialsIcon Icon={Github} link={socials[1].link} />
-            <h2 className="print hidden text-lg text-black">
+            <h2 className="print hidden dark:text-gray-200 text-lg text-black">
               {socials[0].link}
             </h2>
 
             <div className="flex flex-col relative group rounded-lg transition-all ease-in duration-75 align-middle items-center text-center justify-center">
               <a
                 id="email"
-                className=" flex border-[2px]  group-hover:bg-gray-100 border-gray-400 p-1 rounded-lg"
+                className=" flex dark:text-gray-200 border-[2px]  group-hover:bg-gray-100 border-gray-400 p-1 rounded-lg"
                 title={socials[0].name}
                 href={socials[0].link}
               >
                 <Email />
-                <div className="hidden print px-4 text-gray-800">
+                <div className="hidden print dark:text-gray-200 px-4 text-gray-800">
                   <h2 className="">brianzaragoza25@gmail.com</h2>
                 </div>
               </a>

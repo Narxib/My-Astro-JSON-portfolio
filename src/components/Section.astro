@@ -5,7 +5,10 @@ const { title } = Astro.props;
 <div class="w-11/12 max-w-[800px] h-auto p-5">
   {
     title && (
-      <h1 id="title" class="text-2xl font-sans text-gray-800 font-bold mb-2">
+      <h1
+        id="title"
+        class="text-2xl dark:text-gray-200 font-sans text-gray-800 font-bold mb-2"
+      >
         {title}
       </h1>
     )
