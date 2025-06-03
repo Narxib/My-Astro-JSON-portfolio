@@ -14,8 +14,8 @@ import cv from "@/cv.json";
 <Layout>
   <Settings client:load />
   <Header cv={cv.basics} client:load />
-  <Aboutme cv={cv.basics.aboutme} />
-  <Work cv={cv.workExp} />
-  <Knowledge cv={cv.knowledge} />
-  <Projects data={cv.projects} />
+  <Aboutme title="Sobre mi" cv={cv.basics.aboutme} />
+  <Work title="Experiencia laboral" cv={cv.workExp} />
+  <Knowledge title="Conocimientos" cv={cv.knowledge} />
+  <Projects title="Proyectos" data={cv.projects} />
 </Layout>

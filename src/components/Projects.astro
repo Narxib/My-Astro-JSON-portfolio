@@ -2,10 +2,10 @@
 import Section from "./Section.astro";
 import Github from "@/icons/Github";
 import SocialsIcon from "./sections/SocialsIcon.jsx";
-const { data } = Astro.props;
+const { title, data } = Astro.props;
 ---
 
-<Section title="Proyectos">
+<Section title={title}>
   <div class="flex gap-2">
     {
       data.map((item) => {

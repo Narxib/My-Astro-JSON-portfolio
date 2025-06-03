@@ -1,11 +1,12 @@
 ---
 import Section from "../Section.astro";
+
 const data = Astro.props;
-console.log("############", data.cv);
-const { workExp } = data;
+
+const { title, workExp } = data;
 ---
 
-<Section title="Experiencia laboral">
+<Section title={title}>
   <h2 class="text-gray-500 dark:text-gray-300 font-mono text-sm">
     {typeof data.cv === "object" ? "empty" : data.cv}
   </h2>

@@ -1,11 +1,10 @@
 <script>
-    const theme = localStorage.getItem("theme");
-    console.log(typeof theme);
-    if (theme) {
-        localStorage.setItem("theme", theme);
-        document.body.classList.add(theme);
-    } else {
-        localStorage.setItem("theme", "light");
-        document.body.classList.add("light");
-    }
+  const theme = localStorage.getItem("theme");
+  if (theme) {
+    localStorage.setItem("theme", theme);
+    document.body.classList.add(theme);
+  } else {
+    localStorage.setItem("theme", "light");
+    document.body.classList.add("light");
+  }
 </script>

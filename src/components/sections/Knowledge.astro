@@ -10,12 +10,12 @@ import TailwindPill from "../Pills/TailwindPill.astro";
 import CSSPill from "../Pills/CSSPill.astro";
 import BootstrapPill from "../Pills/BootstrapPill.astro";
 import KnowledgeSection from "../sections/KnowledgeSection.astro";
-const knowledge = Astro.props
-const {frameworks,langsandstyling,databases} = knowledge.cv
-
+const { title, cv } = Astro.props;
+console.log(">>>>>>>>>>>", Astro.props);
+const { frameworks, langsandstyling, databases } = cv;
 ---
 
-<Section title="Conocimientos">
+<Section title={title}>
   <div class="flex gap-2">
     <KnowledgeSection title="Frameworks">
       <NextJSPill data={frameworks[0]} />

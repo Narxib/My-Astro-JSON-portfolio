@@ -5,15 +5,32 @@ import cv from "@/cv";
 import Location from "../../icons/Location.jsx";
 import Github from "@/icons/Github.jsx";
 import Email from "@/icons/Email.jsx";
-import ThemeButton from "./ThemeButton.jsx";
+import Toastify from "toastify-js";
 
 export default function Header({ cv }) {
-  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>><", cv);
   function copyContent() {
     let text = document.getElementById("email");
     const email = text.attributes.href.value.slice(7, 32);
     navigator.clipboard.writeText(email);
-    console.log(email);
+
+    Toastify({
+      text: "Email copied to clipboard",
+      duration: 2000,
+      newWindow: true,
+      close: true,
+      style: {
+        background: "white",
+        color: "black",
+        border: "2px solid black",
+        "border-radius": "25px",
+      },
+      className: "dark:bg-black bg-white dark:text-white dark:border-white",
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+
+      onClick: function () {}, // Callback after click
+    }).showToast();
   }
 
   const { name, location, socials } = cv;
@@ -53,16 +70,16 @@ export default function Header({ cv }) {
                 href={socials[0].link}
               >
                 <Email />
+
                 <div className="hidden print dark:text-gray-200 px-4 text-gray-800">
                   <h2 className="">brianzaragoza25@gmail.com</h2>
                 </div>
               </a>
 
-              <div className="invisible  absolute top-9 border-[1px] border-gray-500 rounded-lg bg-gray-100 group-hover:visible">
+              <div className="invisible dark:bg-black  dark:border-white  absolute top-9 border-[1px] border-gray-500 rounded-lg bg-gray-100 group-hover:visible">
                 <button
                   onClick={copyContent}
-                  className="p-1 text-gray-700"
-                  href="/"
+                  className="p-1 dark:text-white text-gray-700"
                 >
                   Copy
                 </button>

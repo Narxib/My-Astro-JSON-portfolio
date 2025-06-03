@@ -1,16 +1,26 @@
 ---
 import UpdateTheme from "@/components/sections/UpdateTheme.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Brian Zaragoza Cerdá | Web Developer</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="/src/layouts/styles.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <UpdateTheme />
     <meta name="generator" content={Astro.generator} />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +30,7 @@ import UpdateTheme from "@/components/sections/UpdateTheme.astro";
     <script></script>
   </head>
   <body class="light">
+    <ClientRouter />
     <slot />
   </body>
 </html>
