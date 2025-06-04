@@ -18,4 +18,4 @@ It has light theme and dark theme as well as two selectable languages: Spanish a
 
 ## Deployment
 
-The live site is deployed in [Netlify](https://www.netlify.com/), [here](https://www.netlify.com/)
+The live site is deployed in [Netlify](https://www.netlify.com/), [here](luminous-belekoy-16c213.netlify.app)
