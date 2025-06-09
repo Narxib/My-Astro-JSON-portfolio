@@ -26,7 +26,7 @@ export default function LanguageButton() {
           ES
         </option>
         <option
-          className="dark:select:bg-black decoration-red-400 hover:bg-red-500 dark:hover:text-white"
+          className="dark:select:bg-black hover:bg-red-500 dark:hover:text-white"
           value="/en"
         >
           EN

@@ -92,12 +92,6 @@ export default function Header({ cv }) {
             </div>
           </div>
         </div>
-
-        <img
-          className="profile w-32 h-32"
-          src="https://i.ibb.co/CspqM9vF/Picsart-25-04-08-16-27-25-069"
-          alt="pf"
-        />
       </div>
     </SectionJSX>
   );

@@ -23,9 +23,9 @@ export default function ThemeButton() {
         width="12"
         height="12"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         class=" stroke-black w-6 h-auto flex  items-center justify-center group-hover:stroke-white dark:group-hover:stroke-black hover:stroke-white dark:stroke-white"
       >
         <path stroke="none" d="M0 0h24v24H0z" />
