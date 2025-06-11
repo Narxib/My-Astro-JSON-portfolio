@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  purge:{
-    enable:true,
-    content: ['./src/**/*.{astro,html,js,jsx,md,ts,tsx}']
-  },
+ 
+    content: ['./src/**/*.{astro,html,js,jsx,md,ts,tsx}'],
+    safelist:["text-gray-300","text-gray-200"],
   theme: {
     extend: {
       display: ["group-hover"],
