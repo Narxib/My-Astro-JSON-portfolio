@@ -5,6 +5,8 @@ export default function LanguageButton() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const currentTheme = localStorage.getItem("theme");
+    document.body.classList.add(currentTheme);
     const pathLang = window.location.pathname.replace("/", "/");
     const selector = document.getElementById("languageMenu");
     if (pathLang === "" || pathLang === "en") {
@@ -22,13 +24,10 @@ export default function LanguageButton() {
         name="language"
         id="languageMenu"
       >
-        <option className="text-red-400" value="/">
+        <option className="text-white-400" value="/">
           ES
         </option>
-        <option
-          className="dark:select:bg-black hover:bg-red-500 dark:hover:text-white"
-          value="/en"
-        >
+        <option className="text-white dark:text-black" value="/en">
           EN
         </option>
       </select>
