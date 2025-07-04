@@ -24,10 +24,10 @@ export default function LanguageButton() {
         name="language"
         id="languageMenu"
       >
-        <option className="text-white-400" value="/">
+        <option className="text-white-400 rounded-lg " value="/">
           ES
         </option>
-        <option className="text-white dark:text-black" value="/en">
+        <option className="text-white-400" value="/en">
           EN
         </option>
       </select>
